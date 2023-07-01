@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { AiOutlineHeart } from 'react-icons/ai';
 import { BiShoppingBag } from 'react-icons/bi';
 import { Link } from 'react-router-dom';
@@ -8,6 +8,31 @@ import Logo from '../../../public/Logo.svg';
 import './Navbar.css';
 
 const Navbar = () => {
+
+  const [menuOpened, setMenuOpened] = useState(true);
+
+  const getMenuStyle = (menuOpened) => {
+    if(document.documentElement.clientWidth <= 500){
+      return {display: menuOpened && 'flex'};
+    }
+  };
+
+  const btnToggle = (menuOpened, child) => {
+    switch(child){
+    case 0:
+      return {
+        transform: menuOpened && 'rotate(45deg)',
+        top: menuOpened &&'20px'
+      };   
+    case 1:
+      return {
+        transform: menuOpened && 'rotate(-45deg)'
+      };  
+    default:
+      break;  
+    }
+  };
+
   return (
     <nav>
       <div className="nav-logo">
@@ -16,7 +41,7 @@ const Navbar = () => {
         </Link>
       </div>
 
-      <ul className="nav-list">
+      <ul className="nav-list" style={getMenuStyle(menuOpened)}>
         <li>
           <Link to="/">
             Home
@@ -38,6 +63,12 @@ const Navbar = () => {
           </Link>
         </li>  
       </ul>      
+      <button  
+        onClick={() => setMenuOpened(prev => !prev)} 
+        className="hamburguer">
+        <span style={btnToggle(menuOpened, 0)}></span>
+        <span style={btnToggle(menuOpened, 1)}></span>
+      </button>
     </nav>  
   );
 };
