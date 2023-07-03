@@ -49,13 +49,14 @@ nav{
     display: flex;
   }
   .nav-list{
+    background-color: white;
     display: none;
     position: absolute;
     top: 80px;
     right: 40px;
     flex-direction: column;
     align-items: center;
-    box-shadow: 3px 3px 10px 2px rgba(0, 0, 0, 0.083);
-    padding: 3rem;
+    box-shadow: 3px 3px 10px 2px rgba(0, 0, 0, 0.657);
+    padding: 3rem;  
   }
 }

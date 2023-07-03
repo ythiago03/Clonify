@@ -1,0 +1,22 @@
+.carousel-item{
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.carousel-img{
+  min-width: 380px;
+  flex: 1;
+}
+
+.carousel-img img{
+  width: 100%;
+  height: 100%;
+}
+
+.carousel-desc{ background-color: red;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  min-width: 380px;
+}
