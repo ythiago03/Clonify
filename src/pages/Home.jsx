@@ -1,23 +1,17 @@
 import React from 'react';
-import { Carousel } from 'react-responsive-carousel';
 
 import Navbar from '../components/Navbar/Navbar';
 
-
 import './Home.css';
-import CarouselItem from '../components/CarouselItem/CarouselItem';
+import CarouselComponent from '../components/CarouselComponent/CarouselComponent';
 
 function Home() {
 
   return (
     <>
       <header>
-        <Navbar /><CarouselItem />
-        {/* <Carousel className="h-carousel">
-          <CarouselItem />
-          <CarouselItem />
-          <CarouselItem />
-        </Carousel> */}
+        <Navbar />
+        <CarouselComponent />
       </header>
     </>
   );

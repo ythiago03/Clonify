@@ -1,0 +1,33 @@
+.arrow{
+  padding: 3px;
+  cursor: pointer;
+  background-color: rgba(255, 255, 255, 0.331);
+  border-radius: 50%;
+  margin: auto 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50px;
+  height: 50px;
+  box-shadow: 1px 1px 10px 2px rgba(0, 0, 0, 0.043);
+}
+
+.l-absolute{
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 20px;
+  z-index: 10;
+}
+
+.hidden{
+  display: none;
+}
+
+.r-absolute{
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 20px;
+  z-index: 10;
+}
