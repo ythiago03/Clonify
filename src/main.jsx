@@ -2,11 +2,11 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 
-import Home from './pages/Home.jsx';
-import Error from './pages/Error.jsx';
-import Shop from './pages/Shop.jsx';
-import Favorite from './pages/Favorite.jsx';
-import Cart from './pages/Cart.jsx';
+import Home from './pages/Home/Home.jsx';
+import Error from './pages/Error/Error.jsx';
+import Shop from './pages/Shop/Shop.jsx';
+import Favorite from './pages/Favorite/Favorite.jsx';
+import Cart from './pages/Cart/Cart.jsx';
 
 import './index.css';
 
